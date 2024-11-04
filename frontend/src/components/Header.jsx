@@ -29,7 +29,7 @@ function Header() {
             onMouseEnter={() => handleOnHover(item)}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="flex items-end justify-between">
+            <button className="flex items-end justify-between px-2  hover:border hover:border-black hover:rounded-full  ">
               {item}
               <FiChevronDown
                 style={{
