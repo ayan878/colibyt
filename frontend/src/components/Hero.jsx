@@ -15,7 +15,7 @@ import { MdRadioButtonChecked } from "react-icons/md";
 
 function Hero() {
   return (
-    <div className="-mt-2">
+    <div className="bg-primary -mt-2">
       <div className="flex w-full gap-16 overflow-hidden">
         <img
           src={img1}
