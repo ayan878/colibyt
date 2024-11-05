@@ -37,7 +37,7 @@ function Hero() {
       <div className="relative -top-24 grid grid-cols-2 gap-2 px-4">
         <div className="flex flex-col gap-4">
           <HeroHeading />
-          <p className="font-semibold text-zinc-400">
+          <p className="font-semibold text-zinc-500">
             In today's rapidly evolving digital landscape, staying ahead of the
             curve is essential for businesses aiming to thrive and succeed.
           </p>

@@ -36,7 +36,7 @@ function HeroHeading() {
   return (
     <h1 className="text-7xl font-bold text-white mb-4 leading-20">
       We Help Companies To Build their very own <nbsp />
-      <mark className="bg-transparent text-sky-400">{displayedText}</mark>
+      <mark className="bg-transparent text-dark">{displayedText}</mark>
     </h1>
   );
 }
