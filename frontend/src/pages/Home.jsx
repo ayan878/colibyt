@@ -1,3 +1,4 @@
+import About from "../components/About";
 import BrandSlider from "../components/BrandSlider";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -6,11 +7,12 @@ import OurServices from "../components/OurServices";
 
 function Home() {
   return (
-    <div className="bg-primary">
+    <div>
       <Header />
       <Hero/>
       <BrandSlider/>
       <OurServices/>
+      <About/>
       {/* <Services/> */}
     </div>
   );
