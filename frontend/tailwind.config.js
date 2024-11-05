@@ -78,6 +78,9 @@ export default {
           xxl: "1400px",
         },
       },
+      backgroundImage: {
+        aboutBackground: "url('/src/assets/bg_image_2.webp')",
+      },
       boxShadow: {
         light: "2px 2px 5px rgba(255, 255, 255, 0.5)",
         dark: "2px 2px 10px rgba(0, 0, 0, 0.2)",
