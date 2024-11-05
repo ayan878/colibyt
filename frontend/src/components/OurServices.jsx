@@ -1,7 +1,6 @@
 import shapeAngle from "../assets/shape_angle_2.webp";
 import shape from "../assets/shape_space_1.svg";
 import titleUnderline from "../assets/shape_title_under_line.svg";
-
 import blockchain from "../assets/icon/nft-blocks.svg";
 import desktop from "../assets/icon/icon_monitor_2.svg";
 import bitcoin from "../assets/icon/research.png";
@@ -11,6 +10,7 @@ import prog from "../assets/icon/icon_programming.svg";
 import bug from "../assets/icon/icon_bug.svg";
 import progTree from "../assets/icon/icon_programming_tree.svg";
 import { MdRadioButtonChecked } from "react-icons/md";
+import { FaArrowRight } from "react-icons/fa6";
 
 const services = [
   {
@@ -54,7 +54,6 @@ const services = [
       "IT Sentry Audit & IT Consulting",
     ],
   },
-
   {
     icon: desktop,
     title: "Web Application Design and Development",
@@ -133,7 +132,7 @@ function OurServices() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-start p-4 border rounded-lg shadow-md bg-white clip-path-diamond"
+            className="group flex flex-col items-start p-4 border rounded-lg shadow-md bg-white clip-path-diamond"
           >
             {/* Icon (If available) */}
             {service.icon && (
@@ -143,11 +142,13 @@ function OurServices() {
                 className="w-12 h-12 object-contain mb-4"
               />
             )}
-
             {/* Title */}
-            <h2 className="text-2xl font-semibold text-primary mb-2">
+            <h1 className="inline-flex text-2xl font-semibold text-primary items-end mb-2 gap-2">
               {service.title}
-            </h2>
+              <span className="ml-2 transform translate-x-[-10px] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-200 ease-out">
+                <FaArrowRight className="inline-flex text-lg" />
+              </span>
+            </h1>
 
             {/* List */}
             <ul className="space-y-4 font-regular">
@@ -156,7 +157,7 @@ function OurServices() {
                   key={idx}
                   className="flex gap-2 bg-gradient-to-l from-sky-200 to-#fffff p-2 text-lg rounded-md text-slate-500"
                 >
-                  <MdRadioButtonChecked className="text-primary w-5 h-5 mt-1" />
+                  <MdRadioButtonChecked className="text-primary w-5 h-5 mt-[6px]" />
                   <span className="flex-1">{item}</span>
                 </li>
               ))}
@@ -169,3 +170,4 @@ function OurServices() {
 }
 
 export default OurServices;
+
