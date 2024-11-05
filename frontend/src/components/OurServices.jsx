@@ -1,10 +1,20 @@
 import shapeAngle from "../assets/shape_angle_2.webp";
 import shape from "../assets/shape_space_1.svg";
-import titleUnderline from "../assets/shape_title_under_line.svg"
+import titleUnderline from "../assets/shape_title_under_line.svg";
+
+import blockchain from "../assets/icon/nft-blocks.svg";
+import desktop from "../assets/icon/icon_monitor_2.svg";
+import bitcoin from "../assets/icon/research.png";
+import mobile from "../assets/icon/icon_phone.svg";
+import code from "../assets/icon/icon_code.svg";
+import prog from "../assets/icon/icon_programming.svg";
+import bug from "../assets/icon/icon_bug.svg";
+import progTree from "../assets/icon/icon_programming_tree.svg";
+import { MdRadioButtonChecked } from "react-icons/md";
 
 const services = [
   {
-    icon: "", // Add icons if necessary
+    icon: blockchain,
     title: "NFT & Blockchain Development",
     list: [
       "Blockchain architecture",
@@ -12,24 +22,20 @@ const services = [
       "Blockchain as a service",
       "Business Implementation",
       "Blockchain & Token Audit",
+    ],
+  },
+  {
+    icon: bitcoin,
+    title: "Blockchain & Token Audit ",
+    list: [
       "Security Assessment & Identify vulnerabilities",
       "Smart Contract Review potential bugs or exploits",
-      "Tokenomics Analysis token distribution and supply mechanisms",
-      "Performance Evaluation Assess the efficiency and speed"
+      "Tokenomics Analysis token distribution and supply mechanisms.",
+      "Performance Evaluation Assess the efficiency and speed",
     ],
   },
   {
-    icon: "", // Add icons if necessary
-    title: "Web Development",
-    list: [
-      "Frontend development",
-      "Backend development",
-      "E-commerce platforms",
-      "API integration",
-    ],
-  },
-  {
-    icon: "", // Add icons if necessary
+    icon: code,
     title: "Custom Software Development",
     list: [
       "Software architecture design",
@@ -39,7 +45,7 @@ const services = [
     ],
   },
   {
-    icon: "", // Add icons if necessary
+    icon: progTree,
     title: "Audit & IT Consulting Services",
     list: [
       "TechGuard Audit",
@@ -48,8 +54,9 @@ const services = [
       "IT Sentry Audit & IT Consulting",
     ],
   },
+
   {
-    icon: "", // Add icons if necessary
+    icon: desktop,
     title: "Web Application Design and Development",
     list: [
       "Web app development services",
@@ -59,7 +66,7 @@ const services = [
     ],
   },
   {
-    icon: "", // Add icons if necessary
+    icon: mobile,
     title: "Mobile App Development",
     list: [
       "Android development services",
@@ -69,7 +76,7 @@ const services = [
     ],
   },
   {
-    icon: "", // Add icons if necessary
+    icon: bug,
     title: "Best UI/UX Design Services",
     list: [
       "PixelPerfection UI/UX Design",
@@ -79,7 +86,7 @@ const services = [
     ],
   },
   {
-    icon: "", // Add icons if necessary
+    icon: prog,
     title: "Maintenance and Customer Support",
     list: [
       "CareCraft Maintenance",
@@ -108,15 +115,21 @@ function OurServices() {
           className="h-[28px] object-contain"
         />
       </div>
+
       <div className="relative -top-32 flex flex-col items-center justify-center text-dark">
         <span className="text-xl uppercase text-center">Our Services</span>
-        <img src={titleUnderline} alt={titleUnderline} className="-mt-2 -ml-10" />
+        <img
+          src={titleUnderline}
+          alt={titleUnderline}
+          className="-mt-2 -ml-10"
+        />
         <h1 className="text-5xl font-bold tracking-wide mt-6">
           How We Can <span className="text-secondary">Help</span> You
         </h1>
       </div>
+
       {/* Services */}
-      <div className="relative -top-32 grid grid-cols-4 gap-4 mt-12 px-4 ">
+      <div className="relative -top-32 grid grid-cols-4 gap-4 mt-12 px-4">
         {services.map((service, index) => (
           <div
             key={index}
@@ -137,10 +150,14 @@ function OurServices() {
             </h2>
 
             {/* List */}
-            <ul className="space-y-2">
+            <ul className="space-y-4 font-regular">
               {service.list.map((item, idx) => (
-                <li key={idx} className="text-sm text-body">
-                  - {item}
+                <li
+                  key={idx}
+                  className="flex gap-2 bg-gradient-to-l from-sky-200 to-#fffff p-2 text-lg rounded-md text-slate-500"
+                >
+                  <MdRadioButtonChecked className="text-primary w-5 h-5 mt-1" />
+                  <span className="flex-1">{item}</span>
                 </li>
               ))}
             </ul>
