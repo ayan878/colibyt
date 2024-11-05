@@ -110,7 +110,7 @@ function OurServices() {
       </div>
       <div className="relative -top-32 flex flex-col items-center justify-center text-dark">
         <span className="text-xl uppercase text-center">Our Services</span>
-        <img src={titleUnderline} alt={titleUnderline} className="-mt-2" />
+        <img src={titleUnderline} alt={titleUnderline} className="-mt-2 -ml-10" />
         <h1 className="text-5xl font-bold tracking-wide mt-6">
           How We Can <span className="text-secondary">Help</span> You
         </h1>
