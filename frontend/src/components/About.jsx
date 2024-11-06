@@ -309,10 +309,10 @@ function About() {
                 {/* The main icon */}
                 <CiGlobe className="text-white w-16 h-16 py-4 relative z-10" />
 
-                {/* First wave (Pill-shaped) */}
+                {/* First wave  */}
                 <div className="absolute inset-0 border-2 border-white rounded-full animate-waveEffect z-0" />
 
-                {/* Second wave (Pill-shaped) with delay */}
+                {/* Second wave with delay */}
                 <div className="absolute inset-0 border-2 border-white rounded-full animate-waveEffectDelay z-0" />
               </div>
 
