@@ -1,13 +1,12 @@
-import img1 from "../assets/shape_image_1.webp";
-import img2 from "../assets/shape_image_2.webp";
-import img3 from "../assets/shape_image_3.webp";
-import img4 from "../assets/shape_image_4.webp";
-import img5 from "../assets/circle_engine_4.png";
-import img6 from "../assets/circle_engine_3.webp";
-import img7 from "../assets/circle_engine_2.webp";
-import fevicon from "../assets/favicon_2.svg";
-
-import TitleUnderLine from "../assets/shape_title_under_line.svg?react";
+import img1 from "../assets/hero/shape_image_1.webp";
+import img2 from "../assets/hero/shape_image_2.webp";
+import img3 from "../assets/hero/shape_image_3.webp";
+import img4 from "../assets/hero/shape_image_4.webp";
+import img5 from "../assets/hero/circle_engine_4.png";
+import img6 from "../assets/hero/circle_engine_3.webp";
+import img7 from "../assets/hero/circle_engine_2.webp";
+import fevicon from "../assets/site_logo/favicon_2.svg";
+import TitleUnderLine from "../assets/shapes/shape_title_under_line.svg?react";
 import HeroHeading from "./HeroHeading";
 import ButtonLink from "./ButtonLink";
 import { FaPhoneVolume } from "react-icons/fa6";
@@ -37,7 +36,7 @@ function Hero() {
       <div className="relative -top-24 grid grid-cols-2 gap-2 px-4">
         <div className="flex flex-col gap-4">
           <HeroHeading />
-          <p className="font-semibold text-zinc-500">
+          <p className="font-semibold text-zinc-400">
             In today's rapidly evolving digital landscape, staying ahead of the
             curve is essential for businesses aiming to thrive and succeed.
           </p>
