@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { stagger, useAnimate } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-const ButtonLink = ({ name }) => {
+const ButtonLink = ({ name,className }) => {
   const [scope, animate] = useAnimate();
   const navigate = useNavigate(); 
   const letter = name;
@@ -47,7 +47,7 @@ const ButtonLink = ({ name }) => {
         onMouseOver={onLinkHover}
         onMouseLeave={onLinkHoverLeave}
         onClick={handleClick}
-        className="link text-md font-bold bg-dark flex items-center px-6 py-2 cursor-pointer justify-between shadow-dark rounded-full gap-2"
+        className={`link text-md font-bold bg-primary flex items-center px-6 py-2 cursor-pointer shadow-dark rounded-full gap-2 ${className}`}
       >
         <span className="sr-only">{name}</span>
         <span className="h-8 overflow-hidden flex" aria-hidden>
