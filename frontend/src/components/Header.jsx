@@ -19,7 +19,7 @@ function Header() {
   };
 
   return (
-    <div className="relative flex items-center justify-between bg-primary text-white px-4 py-2">
+    <div className="relative flex items-center justify-between bg-dark text-white px-4 py-2">
       <Logo className="w-32 h-20" />
       <div className="flex items-center justify-between gap-4 text-white font-semibold">
         {["Services", "Industries", "About Us", "Solutions"].map((item) => (
