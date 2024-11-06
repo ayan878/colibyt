@@ -5,24 +5,25 @@ import ButtonLink from "./ButtonLink";
 import avatar1 from "../assets/avtar/avatar_1.webp";
 import avatar2 from "../assets/avtar/avatar_2.webp";
 import avatar3 from "../assets/avtar/avatar_3.webp";
+import shape1 from "../assets/shape_line.webp";
 import { CiGlobe } from "react-icons/ci";
 
 function About() {
   return (
-    <div className="relative bg-aboutBackground bg-cover bg-no-repeat bg-center pt-[280px] pb-[881px] px-0 bg-dark">
+    <div className="relative bg-aboutBackground bg-cover bg-no-repeat bg-center pt-[10px] pb-[1600px] bg-dark">
       <img
         src={shape2}
         alt="Shape"
         className="absolute top-0 left-48 w-[800px] h-auto"
       />
       {/* Adding a space below */}
-      <div className="-mt-24 grid grid-cols-2">
+      <div className="mt-36 grid grid-cols-2">
         <div className="space-y-4 px-4 mt-28">
           <div className="">
-            <h1 className="text-white font-semibold text-md uppercase">
+            <h1 className="text-white font-semibold text-lg uppercase">
               About Us
             </h1>
-            <TitleUnderLine className="w-24 -mt-3" />
+            <TitleUnderLine className="w-28 -mt-3" />
           </div>
           <h1 className="text-5xl text-white font-bold">
             Colibyt <span className="text-primary">Mission & Goal</span>
@@ -76,8 +77,21 @@ function About() {
               <ButtonLink className="rounded-lg" name="LEARN MORE" />
             </div>
             <div className="relative flex">
-              <CiGlobe className=" text-white w-16 h-16 py-4" />
-              <div className="relative -top-20 h-40 w-[420px] rounded-lg clip-path-sim bg-light flex items-center justify-between px-12 z-30">
+              {/* <div className="relative inline-block ">
+                <CiGlobe className="icon text-white w-16 h-16 py-4" />
+              </div> */}
+              <div className="relative inline-block">
+                {/* The main icon */}
+                <CiGlobe className="text-white w-16 h-16 py-4 relative z-10" />
+
+                {/* First circle (with wave animation) */}
+                <div className="absolute inset-0 border-4 border-white rounded-full animate-waveEffect z-0" />
+
+                {/* Second circle (delayed wave animation) */}
+                <div className="absolute inset-0 border-4 border-white rounded-full animate-waveEffectDelay z-0" />
+              </div>
+
+              <div className="relative -top-20 h-40 w-[420px] rounded-lg clip-path-sim bg-light flex items-center justify-between px-12 z-30 text-primary">
                 <div>
                   <h1 className="font-bold text-5xl">6 K+</h1>
                   <p>Projects Done</p>
@@ -88,6 +102,7 @@ function About() {
                 </div>
               </div>
             </div>
+            <img src={shape1} alt={shape1} className="h-44 -mt-[186px]" />
           </div>
         </div>
       </div>

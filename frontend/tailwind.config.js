@@ -92,6 +92,9 @@ export default {
         rotateClockwise: "spinClockwise 20s linear infinite",
         rotateAntiClockwise: "spinAntiClockwise 20s linear infinite",
         slideLeft: "slideLeft 15s linear infinite",
+        borderExpand: "borderAnimation 2s infinite ease-in-out",
+        waveEffect: "waveEffect 3s ease-out infinite",
+        waveEffectDelay: "waveEffect 3s ease-out infinite 1s",
       },
       keyframes: {
         spinClockwise: {
@@ -113,6 +116,25 @@ export default {
           "60%": { transform: "rotate(-8deg)" },
           "80%": { transform: "rotate(8deg)" },
           "100%": { transform: "rotate(0)" },
+        },
+        borderAnimation: {
+          "0%": {
+            opacity: "1",
+            transform: "scale(0)",
+          },
+          // "50%": {
+          //   opacity: "1",
+          //   transform: "scale(1)",
+          // },
+          "100%": {
+            opacity: "0",
+            transform: "scale(1)",
+          },
+        },
+        waveEffect: {
+          "0%": { opacity: "0", transform: "scale(0)" },
+          "50%": { opacity: "1", transform: "scale(2)" },
+          "100%": { opacity: "0", transform: "scale(3)" },
         },
       },
     },
