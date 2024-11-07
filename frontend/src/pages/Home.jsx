@@ -3,6 +3,7 @@ import BrandSlider from "../components/BrandSlider";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import OurServices from "../components/OurServices";
+import WorkingProcess from "../components/WorkingProcess";
 // import Services from "./Services";
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <BrandSlider/>
       <OurServices/>
       <About/>
+      <WorkingProcess/>
       {/* <Services/> */}
     </div>
   );
