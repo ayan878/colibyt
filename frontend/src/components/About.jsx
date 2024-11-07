@@ -16,7 +16,7 @@ function About() {
       <img
         src={shape2}
         alt="Shape"
-        className="absolute top-0 left-48 w-[800px] h-auto"
+        className="w-[800px] -mt-5 mx-auto"
       />
       {/* About Section */}
       <div className="mt-36 grid grid-cols-2">
