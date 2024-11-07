@@ -116,7 +116,7 @@ function About() {
         </h1>
       </div>
       <StickyCards/>
-      <ButtonLink className="w-fit text-white mx-auto" name="VIEW MORE CASE STUDY"/>
+      <ButtonLink className="w-fit mt-8 text-white mx-auto" name="VIEW MORE CASE STUDY"/>
     </div>
   );
 }
