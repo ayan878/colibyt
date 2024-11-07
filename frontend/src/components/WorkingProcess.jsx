@@ -1,8 +1,10 @@
 import Shape from "../assets/images/shapes/shape_space_3.svg?react";
-import ShapeLine from "../assets/images/shapes/shape_line_2.svg?react";
+import ShapeLine2 from "../assets/images/shapes/shape_line_2.svg?react";
+import ShapeLine3 from "../assets/images/shapes/shape_line_3.svg?react";
 import TitleUnderLine from "../assets/images/shapes/shape_title_under_line.svg?react";
 import { useState } from "react";
 import { LuPlus, LuMinus } from "react-icons/lu";
+import { AnimatePresence, motion } from "framer-motion";
 
 const approaches = [
   {
@@ -35,19 +37,79 @@ const approaches = [
   },
 ];
 
+const technologies = {
+  "web-platform": [
+    "React JS",
+    "Next JS",
+    "JavaScript",
+    "Swift",
+    "Typescript",
+    "Python",
+    "G318",
+    "Java",
+    "Ruby",
+    "C++",
+    "PHP",
+    "Laravel",
+  ],
+  database: [
+    "PostgreSQL",
+    "mongoDB",
+    "Oracle DB",
+    "MySQL",
+    "Firestore",
+    "Redis",
+    "Microsoft SQL",
+    "Elasticsearch",
+    "Scylla",
+    "BigchainDB",
+  ],
+  "cloud&devops": [
+    "Docker",
+    "Jenkins",
+    "Ansible",
+    "Kubernetes",
+    "AWS",
+    "Terraform",
+    "JIRA",
+  ],
+  "mobile-apps": [
+    "React Native",
+    "Flutter",
+    "Ionic",
+    "Java",
+    "Kotlin",
+    "Xamarin",
+    "Swift",
+    "Angular UI",
+  ],
+  "other-framework": [
+    "Django",
+    "Ruby On Rails",
+    "Express JS",
+    "Dot net Core",
+    "Codeigniter",
+    "Vue JS",
+  ],
+};
+
 function WorkingProcess() {
   // State to track which item is open (by index)
   const [openIndex, setOpenIndex] = useState(null);
+  const [isActive, setisActive] = useState(false);
 
   const handleToggle = (index) => {
     // Toggle open/close for a specific item
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const handleTech = () => {
+    setisActive(!isActive);
+  };
   return (
     <div className="bg-light">
       <Shape className="w-[800px] h-auto mx-auto" />
-      <ShapeLine className="-mt-8" />
+      <ShapeLine2 className="-mt-8" />
       <div className="flex gap-12">
         <div className="px-4 -mt-8 w-3/5">
           <h1 className="text-primary font-semibold text-lg uppercase">
@@ -65,53 +127,161 @@ function WorkingProcess() {
                   onClick={() => handleToggle(index)}
                 >
                   <span>{approach.title}</span>
-                  <span className="flex items-center justify-center"
-                    style={{
-                      transition: "transform 0.3s ease",
-                      transformOrigin: "center",
-                      transform:
-                        openIndex === index ? "rotate(180deg)" : "rotate(0deg)",
+                  <motion.span
+                    animate={{
+                      rotate: openIndex === index ? 180 : 0,
                     }}
+                    transition={{ duration: 0.5 }}
+                    className="symbol flex items-center justify-center"
                   >
                     {openIndex === index ? <LuMinus /> : <LuPlus />}
-                  </span>
+                  </motion.span>
                 </div>
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openIndex === index ? "max-h-[500px]" : "max-h-0"
-                  }`}
-                >
-                  <p className="text-dark bg-primary-bg-subtle px-12 text-base font-regular py-4">
-                    {approach.desc}
-                  </p>
-                </div>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-dark bg-primary-bg-subtle px-12 text-base font-regular py-4">
+                        {approach.desc}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
         </div>
         <div className="relative flex flex-col w-2/5 text-primary font-bold text-xl">
-          <div className="relative h-32 w-96 text-white text-center  flex justify-center items-center bg-primary border border-primary rounded-[50%]">
+          <div
+            className={`relative h-32 w-96 text-primary text-center  flex justify-center items-center ${
+              openIndex == 0 ? "bg-primary text-white" : ""
+            } border border-primary rounded-[50%]`}
+            onClick={() => {
+              handleToggle(0);
+            }}
+          >
             Communication
           </div>
-          <div className="relative -top-6 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
+          <div
+            className={`relative -top-6 h-32 w-96 text-center  flex justify-center items-center  border  border-primary  ${
+              openIndex == 1 ? "bg-primary text-white" : "bg-transparent"
+            } rounded-[50%]`}
+            onClick={() => {
+              handleToggle(1);
+            }}
+          >
             Planning
           </div>
-          <div className="relative -top-14 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
+          <div
+            className={`relative -top-14 h-32 w-96 text-center  flex justify-center items-center border  border-primary rounded-[50%]  ${
+              openIndex == 2 ? "bg-primary text-white" : "bg-transparent"
+            }`}
+            onClick={() => {
+              handleToggle(2);
+            }}
+          >
             Execution
           </div>
-          <div className="relative -top-20 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
+          <div
+            className={`relative -top-20 h-32 w-96 text-center  flex justify-center items-center border  border-primary rounded-[50%]  ${
+              openIndex == 3 ? "bg-primary text-white" : "bg-transparent"
+            }`}
+            onClick={() => {
+              handleToggle(3);
+            }}
+          >
             Architectures and infrastructures
           </div>
-          <div className="relative -top-28 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
+          <div
+            className={`relative -top-28 h-32 w-96 text-center  flex justify-center items-center border  border-primary rounded-[50%]  ${
+              openIndex == 4 ? "bg-primary text-white" : "bg-transparent"
+            }`}
+            onClick={() => {
+              handleToggle(4);
+            }}
+          >
             Transparency
           </div>
-          <div className="relative -top-36 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
+          <div
+            className={`relative -top-36 h-32 w-96 text-center  flex justify-center items-center border  border-primary rounded-[50%]  ${
+              openIndex == 5 ? "bg-primary text-white" : "bg-transparent"
+            }`}
+            onClick={() => {
+              handleToggle(5);
+            }}
+          >
             Delivery
           </div>
-          <div className="relative -top-44 h-32 w-96 text-center  flex justify-center items-center bg-transparent border  border-primary rounded-[50%]">
-            Restrospective
+          <div
+            className={`relative -top-44 h-32 w-96 text-center  flex justify-center items-center border  border-primary rounded-[50%]  ${
+              openIndex == 6 ? "bg-primary text-white" : "bg-transparent"
+            }`}
+            onClick={() => {
+              handleToggle(6);
+            }}
+          >
+            Retrospective
           </div>
+          <ShapeLine3 className="-mt-[370px] ml-64" />
         </div>
+      </div>
+
+      {/* Technologies Section */}
+      <div className="flex flex-col items-center justify-center gap-2 -mt-80">
+        <h1 className="text-white font-semibold text-lg uppercase">
+          Our Technologies
+        </h1>
+        <TitleUnderLine className="-mt-6 mr-8" />
+        <h1 className="text-dark text-5xl font-bold">
+          We Use <span className="text-primary"> Technologies</span>
+        </h1>
+      </div>
+      <div className="bg-indigo-300 flex items-center justify-between mx-28 px-4 py-3 text-xl text-dark font-semibold rounded-lg mt-6">
+        <button
+          className={` ${
+            isActive == true ? "bg-white" : ""
+          } px-6 rounded-lg py-1`}
+          onClick={handleTech}
+        >
+          Web Platform
+        </button>
+        <button
+          className={` ${
+            isActive == true ? "bg-white" : ""
+          } px-6 rounded-lg py-1`}
+          onClick={handleTech}
+        >
+          Databases
+        </button>
+        <button
+          className={` ${
+            isActive == true ? "bg-white" : ""
+          } px-6 rounded-lg py-1`}
+          onClick={handleTech}
+        >
+          DevOps
+        </button>
+        <button
+          className={` ${
+            isActive == true ? "bg-white" : ""
+          } px-6 rounded-lg py-1`}
+          onClick={handleTech}
+        >
+          Mobile Apps
+        </button>
+        <button
+          className={` ${
+            isActive == true ? "bg-white" : ""
+          } px-6 rounded-lg py-1`}
+          onClick={handleTech}
+        >
+          Other Framework
+        </button>
       </div>
     </div>
   );
