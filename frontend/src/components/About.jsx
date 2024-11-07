@@ -110,7 +110,7 @@ function About() {
         <h1 className="text-white font-semibold text-lg uppercase">
           Our Showcase
         </h1>
-        <TitleUnderLine className="-mt-3" />
+        <TitleUnderLine className="-mt-6 mr-8" />
         <h1 className="text-white text-5xl font-bold">
           Our latest <span className="text-primary">Case</span> Studies
         </h1>
