@@ -1,16 +1,18 @@
 import { CiGlobe } from "react-icons/ci";
 import ButtonLink from "./ButtonLink";
-import TitleUnderLine from "../assets/shapes/shape_title_under_line.svg?react";
-import about from "../assets/about/about_image_6.webp";
-import avatar1 from "../assets/avtar/avatar_1.webp";
-import avatar2 from "../assets/avtar/avatar_2.webp";
-import avatar3 from "../assets/avtar/avatar_3.webp";
-import shape1 from "../assets/shapes/shape_line.webp";
-import shape2 from "../assets/shapes/shape_space_2.svg";
+import TitleUnderLine from "../assets/images/shapes/shape_title_under_line.svg?react";
+import about from "../assets/images/about/about_image_6.webp";
+import avatar1 from "../assets/images/avtar/avatar_1.webp";
+import avatar2 from "../assets/images/avtar/avatar_2.webp";
+import avatar3 from "../assets/images/avtar/avatar_3.webp";
+import shape1 from "../assets/images/shapes/shape_line.webp";
+import shape2 from "../assets/images/shapes/shape_space_2.svg";
+import StickyCards from "./StickyCards";
+
 
 function About() {
   return (
-    <div className="relative bg-aboutBackground bg-cover bg-no-repeat bg-center pt-[10px] pb-[1600px] bg-dark">
+    <div className="relative bg-aboutBackground bg-cover bg-no-repeat bg-center pt-[20px] pb-[100px] bg-dark">
       <img
         src={shape2}
         alt="Shape"
@@ -113,6 +115,8 @@ function About() {
           Our latest <span className="text-primary">Case</span> Studies
         </h1>
       </div>
+      <StickyCards/>
+      <ButtonLink className="w-fit text-white mx-auto" name="VIEW MORE CASE STUDY"/>
     </div>
   );
 }
