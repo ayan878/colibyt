@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/site_logo/zennit-light.svg?react";
+import Logo from "../assets/images/site_logo/zennit-light.svg?react";
 import ButtonLink from "./ButtonLink";
 import { FiChevronDown } from "react-icons/fi";
 import Services from "../pages/Services";
