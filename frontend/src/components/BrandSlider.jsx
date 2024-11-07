@@ -1,13 +1,15 @@
-import client1 from "../assets/logo/Cadbury-Logo-600x400.png.webp";
-import client2 from "../assets/logo/Citibank-Logo-600x400.png.webp";
-import client3 from "../assets/logo/Dior-Logo-600x400.png.webp";
-import client4 from "../assets/logo/IBM-Logo-600x400.png.webp";
-import client5 from "../assets/logo/Louis-Vuitton-Logo-600x400.png.webp"
-import client6 from "../assets/logo/Royal-Bank-of-Canada-Logo-600x400.png.webp";
-import client7 from "../assets/logo/Shein-Logo-600x400.png.webp";
-import client8 from "../assets/logo/Societe-Generale-Logo-600x400.png.webp";
-import client9 from "../assets/logo/Supreme-Logo-600x400.png.webp";
-import client10 from "../assets/logo/Walmart-Logo-600x400.png.webp";
+import client1 from "../assets/images/clients/ambience.png";
+import client2 from "../assets/images/clients/bharattr.png";
+import client3 from "../assets/images/clients/client_logo_1.webp";
+import client4 from "../assets/images/clients/client_logo_10.webp";
+import client5 from "../assets/images/clients/client_logo_2.webp"
+import client6 from "../assets/images/clients/client_logo_3.webp";
+import client7 from "../assets/images/clients/client_logo_4.webp";
+import client8 from "../assets/images/clients/client_logo_5.webp";
+import client9 from "../assets/images/clients/client_logo_6.webp";
+import client10 from "../assets/images/clients/client_logo_7.webp";
+import client11 from "../assets/images/clients/client_logo_8.webp";
+import client12 from "../assets/images/clients/client_logo_9.webp";
 
 const brands = [
   { img: client1 },
@@ -20,6 +22,8 @@ const brands = [
   { img: client8 },
   { img: client9 },
   { img: client10 },
+  { img: client11 },
+  { img: client12 },
 ];
 
 function BrandSlider() {
@@ -37,7 +41,7 @@ function BrandSlider() {
                 key={index}
                 src={brand.img}
                 alt={`Brand logo ${index + 1}`}
-                className="flex items-center justify-center w-40 h-20 object-contain bg-white rounded-md clip-path-sim"
+                className="flex items-center justify-center w-40 h-20 p-4 object-contain bg-white rounded-md clip-path-sim"
               />
             ))}
           </div>
