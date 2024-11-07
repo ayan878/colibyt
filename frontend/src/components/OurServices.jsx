@@ -1,17 +1,17 @@
-import shapeAngle from "../assets/shapes/shape_angle_2.webp";
-import shape from "../assets/shapes/shape_space_1.svg";
-import titleUnderline from "../assets/shapes/shape_title_under_line.svg";
-import blockchain from "../assets/icons/nft-blocks.svg";
-import desktop from "../assets/icons/icon_monitor_2.svg";
-import bitcoin from "../assets/icons/research.png";
-import mobile from "../assets/icons/icon_phone.svg";
-import code from "../assets/icons/icon_code.svg";
-import prog from "../assets/icons/icon_programming.svg";
-import bug from "../assets/icons/icon_bug.svg";
-import progTree from "../assets/icons/icon_programming_tree.svg";
+import shapeAngle from "../assets/images/shapes/shape_angle_2.webp";
+import shape from "../assets/images/shapes/shape_space_1.svg";
+import titleUnderline from "../assets/images/shapes/shape_title_under_line.svg";
+import blockchain from "../assets/images/icons/nft-blocks.svg";
+import desktop from "../assets/images/icons/icon_monitor_2.svg";
+import bitcoin from "../assets/images/icons/research.png";
+import mobile from "../assets/images/icons/icon_phone.svg";
+import code from "../assets/images/icons/icon_code.svg";
+import prog from "../assets/images/icons/icon_programming.svg";
+import bug from "../assets/images/icons/icon_bug.svg";
+import progTree from "../assets/images/icons/icon_programming_tree.svg";
 import { MdRadioButtonChecked } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
-import shapeAngle1 from "../assets/shapes/shape_angle_1.webp";
+import shapeAngle1 from "../assets/images/shapes/shape_angle_1.webp";
 
 const services = [
   {
