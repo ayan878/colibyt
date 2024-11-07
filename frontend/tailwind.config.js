@@ -79,7 +79,7 @@ export default {
         },
       },
       backgroundImage: {
-        aboutBackground: "url('/src/assets/background/bg_image_2.webp')",
+        aboutBackground: "url('/src/assets/images/background/bg_image_2.webp')",
       },
       boxShadow: {
         light: "2px 2px 5px rgba(255, 255, 255, 0.5)",
