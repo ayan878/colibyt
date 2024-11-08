@@ -2,114 +2,33 @@ import Shape from "../assets/images/shapes/shape_space_3.svg?react";
 import ShapeLine2 from "../assets/images/shapes/shape_line_2.svg?react";
 import ShapeLine3 from "../assets/images/shapes/shape_line_3.svg?react";
 import TitleUnderLine from "../assets/images/shapes/shape_title_under_line.svg?react";
+import ShapeLine4 from "../assets/images/shapes/shape_line_4.svg?react";
 import { useState } from "react";
 import { LuPlus, LuMinus } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
-
-const approaches = [
-  {
-    title: "01. COMMUNICATION",
-    desc: "Once we have a contract in place, we open a connection on Slack or any other chatting tool that allows the allocated resources to team-up with you and your stakeholders to start the planning. The communication channel is kept up forever and of course involves also several strategic agile meetings on most famous video-call tools.",
-  },
-  {
-    title: "02. PLANNING",
-    desc: "Within maximum 2 weeks since the start of the contract through the first planning meetings we create a roadmap with you, collecting and deconstructing all the milestones following a OKRs-oriented approach on our proprietary workflow management system.",
-  },
-  {
-    title: "03. Execution",
-    desc: "Every quarter we design a new roadmap together for a bigger shape overview, while on a 2 weeks basis we have an update meeting, where our project managers and your product owners check the progress together.",
-  },
-  {
-    title: "04. ARCHITECTURES AND INFRASTRUCTURES",
-    desc: "At the project start developers create the boilerplate and decide the tech stack according to requirements and devOps engineers start to build a cluster, for staging and production environments.",
-  },
-  {
-    title: "05. TRANSPARENCY",
-    desc: "Everything from communication channels to tools we use is meant to make your life easier and enjoy the collaboration but also to experiment what it means to be part of an Agile team with solid professionals at your disposal that proactively make the product grow iteration after iteration. Our workflow management system allows us to share a link with full visibility on the development and milestones boards so that you could watch the progress in real time and see how the team quickly completes tasks on a daily basis.",
-  },
-  {
-    title: "06. DELIVERY",
-    desc: "Every iteration has a 2 weeks duration, at the end of each, we deliver a product increase in a staging environment where you could review it and check the progress. You also receive a report that highlights all tasks accomplished and the progress on each module.",
-  },
-  {
-    title: "07. RETROSPECTIVE",
-    desc: "Every month we look back at our work, open to your suggestions on how to tweak the workflow to keep improving it and let our partnership aim to perfection.",
-  },
-];
-
-const technologies = {
-  "web-platform": [
-    "React JS",
-    "Next JS",
-    "JavaScript",
-    "Swift",
-    "Typescript",
-    "Python",
-    "G318",
-    "Java",
-    "Ruby",
-    "C++",
-    "PHP",
-    "Laravel",
-  ],
-  database: [
-    "PostgreSQL",
-    "mongoDB",
-    "Oracle DB",
-    "MySQL",
-    "Firestore",
-    "Redis",
-    "Microsoft SQL",
-    "Elasticsearch",
-    "Scylla",
-    "BigchainDB",
-  ],
-  "cloud&devops": [
-    "Docker",
-    "Jenkins",
-    "Ansible",
-    "Kubernetes",
-    "AWS",
-    "Terraform",
-    "JIRA",
-  ],
-  "mobile-apps": [
-    "React Native",
-    "Flutter",
-    "Ionic",
-    "Java",
-    "Kotlin",
-    "Xamarin",
-    "Swift",
-    "Angular UI",
-  ],
-  "other-framework": [
-    "Django",
-    "Ruby On Rails",
-    "Express JS",
-    "Dot net Core",
-    "Codeigniter",
-    "Vue JS",
-  ],
-};
+import hexagon from "../assets/images/shapes/shape_polygon.webp";
+import { technologies, approaches } from "../data/approachesAndTechnologies";
 
 function WorkingProcess() {
   // State to track which item is open (by index)
   const [openIndex, setOpenIndex] = useState(null);
-  const [isActive, setisActive] = useState(false);
+
+  const [category, setCategory] = useState("WebPlatform");
 
   const handleToggle = (index) => {
     // Toggle open/close for a specific item
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleTech = () => {
-    setisActive(!isActive);
+  const handleCategory = (selectCategory) => {
+    setCategory(selectCategory);
   };
+
   return (
     <div className="bg-light">
       <Shape className="w-[800px] h-auto mx-auto" />
       <ShapeLine2 className="-mt-8" />
+      {/* working PROCESS */}
       <div className="flex gap-12">
         <div className="px-4 -mt-8 w-3/5">
           <h1 className="text-primary font-semibold text-lg uppercase">
@@ -233,56 +152,44 @@ function WorkingProcess() {
 
       {/* Technologies Section */}
       <div className="flex flex-col items-center justify-center gap-2 -mt-80">
-        <h1 className="text-white font-semibold text-lg uppercase">
+        <h1 className="text-primary font-semibold text-lg uppercase">
           Our Technologies
         </h1>
-        <TitleUnderLine className="-mt-6 mr-8" />
+        <TitleUnderLine className="-mt-6 mr-4" />
         <h1 className="text-dark text-5xl font-bold">
           We Use <span className="text-primary"> Technologies</span>
         </h1>
       </div>
-      <div className="bg-indigo-300 flex items-center justify-between mx-28 px-4 py-3 text-xl text-dark font-semibold rounded-lg mt-6">
-        <button
-          className={` ${
-            isActive == true ? "bg-white" : ""
-          } px-6 rounded-lg py-1`}
-          onClick={handleTech}
-        >
-          Web Platform
-        </button>
-        <button
-          className={` ${
-            isActive == true ? "bg-white" : ""
-          } px-6 rounded-lg py-1`}
-          onClick={handleTech}
-        >
-          Databases
-        </button>
-        <button
-          className={` ${
-            isActive == true ? "bg-white" : ""
-          } px-6 rounded-lg py-1`}
-          onClick={handleTech}
-        >
-          DevOps
-        </button>
-        <button
-          className={` ${
-            isActive == true ? "bg-white" : ""
-          } px-6 rounded-lg py-1`}
-          onClick={handleTech}
-        >
-          Mobile Apps
-        </button>
-        <button
-          className={` ${
-            isActive == true ? "bg-white" : ""
-          } px-6 rounded-lg py-1`}
-          onClick={handleTech}
-        >
-          Other Framework
-        </button>
+      {/* Technology Category Buttons */}
+      <div className="relative bg-indigo-300 flex items-center justify-between mx-20 px-4 py-3 text-md text-dark font-semibold rounded-lg mt-6">
+        {Object.keys(technologies).map((key) => (
+          <button
+            key={key}
+            className={`${
+              category === key ? "bg-white" : "text-white"
+            } px-6 rounded-lg py-1 cursor-pointer`}
+            onClick={() => handleCategory(key)}
+          >
+            {key.replace(/([A-Z])/g, " $1").toUpperCase()}
+          </button>
+        ))}
       </div>
+
+      {/* Display Technologies */}
+      <div className="grid grid-cols-6 gap-8 mt-4 mx-16 border-2">
+        {technologies[category]?.map((tech, index) => (
+          <div key={index}>
+            <div className="relative flex flex-col items-center justify-center border-2 ">
+              <div className="absolute flex items-center justify-center">
+                <img src={tech.icon} alt={tech.icon} />
+              </div>
+              <img src={hexagon} alt="hexagon" className="w-28 h-28 " />
+            </div>
+            <p className="text-center text-xl">{tech.name}</p>
+          </div>
+        ))}
+      </div>
+      <ShapeLine4 className="h-96 -ml-4 -mt-40" />
     </div>
   );
 }
