@@ -176,16 +176,16 @@ function WorkingProcess() {
       </div>
 
       {/* Display Technologies */}
-      <div className="grid grid-cols-6 gap-8 mt-4 mx-16 border-2">
+      <div className="grid grid-cols-2 md:grid-cols-4  lg:grid-cols-6 gap-8 mt-4 mx-16">
         {technologies[category]?.map((tech, index) => (
           <div key={index}>
-            <div className="relative flex flex-col items-center justify-center border-2 ">
+            <div className="relative flex flex-col items-center justify-center">
               <div className="absolute flex items-center justify-center">
                 <img src={tech.icon} alt={tech.icon} />
               </div>
               <img src={hexagon} alt="hexagon" className="w-28 h-28 " />
             </div>
-            <p className="text-center text-xl">{tech.name}</p>
+            <p className="text-center text-xl text-dark">{tech.name}</p>
           </div>
         ))}
       </div>
