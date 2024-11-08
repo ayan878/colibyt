@@ -121,7 +121,6 @@
 
 // export default App1;
 
-import React from "react";
 import case1 from "../assets/images/case/case_image_1.webp";
 import case2 from "../assets/images/case/case_image_2.webp";
 import case3 from "../assets/images/case/case_image_3.webp";
