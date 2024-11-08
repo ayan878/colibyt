@@ -109,7 +109,7 @@ export const technologies = {
     { name: "C", icon: C },
     { name: "PHP", icon: Php },
     { name: "Laravel", icon: Laravel },
-    { name: "Laravel", icon: Python },
+    { name: "Python", icon: Python },
   ],
   Database: [
     { name: "PostgreSQL", icon: PostgreSQL },
