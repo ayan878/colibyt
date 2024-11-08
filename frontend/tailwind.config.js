@@ -24,6 +24,8 @@ export default {
       clipPath: {
         diamond: "polygon(80% 0px, 100% 20%, 100% 100%, 0px 100%, 0px 0px)",
         sim: "polygon(80% 0px, 100% 30%, 100% 100%, 0px 100%, 0px 0px)",
+        hexagon:
+          "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
       },
       // Custom Colors
       colors: {
@@ -93,8 +95,8 @@ export default {
         rotateAntiClockwise: "spinAntiClockwise 20s linear infinite",
         slideLeft: "slideLeft 15s linear infinite",
         borderExpand: "borderAnimation 2s infinite ease-in-out",
-        waveEffect: 'waveEffect 3s ease-out infinite',
-        waveEffectDelay: 'waveEffect 3s ease-out infinite 1s',
+        waveEffect: "waveEffect 3s ease-out infinite",
+        waveEffectDelay: "waveEffect 3s ease-out infinite 1s",
       },
       keyframes: {
         spinClockwise: {
