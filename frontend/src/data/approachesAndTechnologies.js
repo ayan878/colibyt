@@ -23,7 +23,7 @@ import Swift from "../assets/images/icons/icon_swift.svg";
 import Gatsby from "../assets/images/icons/icon_gatsby.svg";
 
 // Database Icons
-import PostgreSQL from "../assets/images/icons/icon_postgresql.svg"; 
+import PostgreSQL from "../assets/images/icons/icon_postgresql.svg";
 import MongoDB from "../assets/images/icons/icon_mongodb.svg";
 import OracleDB from "../assets/images/icons/icons_oracledb.svg";
 import MySQL from "../assets/images/icons/icon_mySql.svg";
@@ -35,15 +35,14 @@ import ScyllaDB from "../assets/images/icons/icon_scylladb.svg";
 import BigchainDB from "../assets/images/icons/icon_bigchainDB.svg";
 
 // Cloud and DevOps Icons
-import Docker from "../assets/images/icons/icon_docker.svg"; 
+import Docker from "../assets/images/icons/icon_docker.svg";
 import Jenkins from "../assets/images/icons/icon_jenkins.svg";
 import Ansible from "../assets/images/icons/icon_ansible.svg";
 import Kubernetes from "../assets/images/icons/icon_kubernetes.svg";
-import AWS from "../assets/images/icons/icon-amazonWebServices.svg"
+import AWS from "../assets/images/icons/icon-amazonWebServices.svg";
 import Terraform from "../assets/images/icons/icon_terraform.svg";
 import Jira from "../assets/images/icons/icon_jira.svg";
 import GitHub from "../assets/images/icons/icon_github.svg";
-
 
 // Mobile App Icons
 import Flutter from "../assets/images/icons/icon_flutter.svg";
@@ -109,7 +108,6 @@ export const technologies = {
     { name: "C", icon: C },
     { name: "PHP", icon: Php },
     { name: "Laravel", icon: Laravel },
-    { name: "Python", icon: Python },
   ],
   Database: [
     { name: "PostgreSQL", icon: PostgreSQL },

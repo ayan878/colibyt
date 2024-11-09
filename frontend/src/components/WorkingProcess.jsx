@@ -14,7 +14,7 @@ function WorkingProcess() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const [category, setCategory] = useState("WebPlatform");
-
+  
   const handleToggle = (index) => {
     // Toggle open/close for a specific item
     setOpenIndex(openIndex === index ? null : index);
@@ -176,18 +176,20 @@ function WorkingProcess() {
       </div>
 
       {/* Display Technologies */}
-      <div className="grid grid-cols-2 md:grid-cols-4  lg:grid-cols-6 gap-8 mt-4 mx-16">
-        {technologies[category]?.map((tech, index) => (
-          <div key={index}>
-            <div className="relative flex flex-col items-center justify-center">
-              <div className="absolute flex items-center justify-center">
-                <img src={tech.icon} alt={tech.icon} />
+      <div className="flex flex-wrap items-center justify-center gap-8 mt-4 mx-16">
+        {technologies[category]?.map((tech, index) => {
+          return (
+            <div key={index}>
+              <div className="relative flex flex-col items-center justify-center">
+                <div className="absolute flex items-center justify-center">
+                  <img src={tech.icon} alt={tech.icon} />
+                </div>
+                <img src={hexagon} alt="hexagon" className="w-28 h-28 " />
               </div>
-              <img src={hexagon} alt="hexagon" className="w-28 h-28 " />
+              <p className="text-center text-xl text-dark">{tech.name}</p>
             </div>
-            <p className="text-center text-xl text-dark">{tech.name}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <ShapeLine4 className="h-96 -ml-4 -mt-40" />
     </div>
