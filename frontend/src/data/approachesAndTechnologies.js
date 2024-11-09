@@ -17,7 +17,6 @@ import Java from "../assets/images/icons/icon_java.svg";
 import Laravel from "../assets/images/icons/icon_laravel.svg";
 import Php from "../assets/images/icons/icon_php.svg";
 import Ruby from "../assets/images/icons/icon_ruby.svg";
-import C from "../assets/images/icons/icon_c.svg";
 import CPlus from "../assets/images/icons/icon_c_plus.svg";
 import Swift from "../assets/images/icons/icon_swift.svg";
 import Gatsby from "../assets/images/icons/icon_gatsby.svg";
@@ -105,7 +104,6 @@ export const technologies = {
     { name: "Java", icon: Java },
     { name: "Ruby", icon: Ruby },
     { name: "C++", icon: CPlus },
-    { name: "C", icon: C },
     { name: "PHP", icon: Php },
     { name: "Laravel", icon: Laravel },
   ],
