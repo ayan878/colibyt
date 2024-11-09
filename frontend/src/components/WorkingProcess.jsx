@@ -176,7 +176,7 @@ function WorkingProcess() {
       </div>
 
       {/* Display Technologies */}
-      <div className="flex flex-wrap items-center justify-center gap-8 mt-4 mx-16">
+      <div className="flex flex-wrap items-center justify-center gap-16 mt-4 mx-16">
         {technologies[category]?.map((tech, index) => {
           return (
             <div key={index}>
