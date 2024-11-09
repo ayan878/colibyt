@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { transform } from "framer-motion";
 import clipPath from "tailwind-clip-path";
 
 export default {
@@ -94,9 +95,10 @@ export default {
         rotateClockwise: "spinClockwise 20s linear infinite",
         rotateAntiClockwise: "spinAntiClockwise 20s linear infinite",
         slideLeft: "slideLeft 15s linear infinite",
-        borderExpand: "borderAnimation 2s infinite ease-in-out",
-        waveEffect: "waveEffect 3s ease-out infinite",
-        waveEffectDelay: "waveEffect 3s ease-out infinite 1s",
+        rippleEffect: "rippleEffect 3s ease-out infinite",
+        rippleEffectDelay: "rippleEffect 3s ease-out infinite 1s",
+        loader: "orbitLoader 3s linear infinite",
+        prixClipFix: "prixClipFix 3s linear infinite ;",
       },
       keyframes: {
         spinClockwise: {
@@ -119,15 +121,38 @@ export default {
           "80%": { transform: "rotate(8deg)" },
           "100%": { transform: "rotate(0)" },
         },
-        waveEffect: {
+        rippleEffect: {
           "0%": { opacity: "0", transform: "scale(0.5)" },
           "50%": { opacity: "1.5", transform: "scale(0.8)" },
           "100%": { opacity: "0", transform: "scale(1)" },
         },
-        waveEffectDelay: {
+        rippleEffectDelay: {
           "0%": { opacity: "0", transform: "scale(0.5)" },
           "50%": { opacity: "1", transform: "scale(1.5)" }, // Bigger, pill-shaped
           "100%": { opacity: "0", transform: "scale(2)" }, // Continue growing and fading out
+        },
+        orbitLoader: {
+          "0%": { transform: "rotate(0deg)translateX(50)" },
+          "100%": { transform: "rotate(360deg)translateX(50)" },
+        },
+        prixClipFix: {
+          "0%": {
+            clipPath: "polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)",
+          },
+          "10%": {
+            clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)",
+          },
+          // "50%": {
+          //   clipPath:
+          //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)",
+          // },
+          // "75%": {
+          //   clipPath:
+          //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)",
+          // },
+          // "100%": {
+          //   clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)",
+          // },
         },
       },
     },
