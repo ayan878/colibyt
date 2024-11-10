@@ -28,7 +28,7 @@ function App() {
           <img
             src={fevicon}
             alt="Site Favicon"
-            className="w-24 h-24 rounded-full p-4 object-contain"
+            className="w-24 h-24 rounded-full p-4 px-2 object-contain"
           />
         </div>
       </div>
