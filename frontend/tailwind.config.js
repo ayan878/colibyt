@@ -23,6 +23,7 @@ export default {
         duotone: "900",
       },
       clipPath: {
+        memery:"polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, calc(100% - 12px) 100%, 12px 100%, 0px 100%, 0px 0px);",
         diamond: "polygon(80% 0px, 100% 20%, 100% 100%, 0px 100%, 0px 0px)",
         sim: "polygon(80% 0px, 100% 30%, 100% 100%, 0px 100%, 0px 0px)",
         hexagon:
