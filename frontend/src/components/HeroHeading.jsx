@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import Reveal from "./ui/Reveal";
 
 const phrases = [
   "Software.",
@@ -34,10 +36,19 @@ function HeroHeading() {
   }, [displayedText, currentPhraseIndex]);
 
   return (
-    <h1 className="text-7xl font-bold text-white mb-4 leading-20">
-      We Help Companies To Build their very own {" "}
-      <mark className="bg-transparent text-dark">{displayedText}</mark>
-    </h1>
+    <div className="text-[60px] font-bold text-white leading-tight mb-4">
+      <Reveal>
+        <p>We Help Companies</p>
+      </Reveal>
+      <Reveal>
+        <p>To Build their very </p>
+      </Reveal>
+      <Reveal>
+        <mark className="bg-transparent text-primary">
+          <span className="text-white">own</span> {displayedText}
+        </mark>
+      </Reveal>
+    </div>
   );
 }
 
