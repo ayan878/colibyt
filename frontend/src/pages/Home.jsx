@@ -6,6 +6,7 @@ import OurServices from "../components/OurServices";
 import WorkingProcess from "../components/WorkingProcess";
 // import Services from "./Services";
 import Header2 from "../components/Header2"
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <OurServices/>
       <About/>
       <WorkingProcess/>
+      <Footer/>
       {/* <Services/> */}
     </div>
   );
