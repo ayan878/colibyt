@@ -94,7 +94,7 @@ function Footer() {
                 placeholder="Enter your email"
                 className="bg-transparent text-white focus:outline-none flex-1 p-2"
               />
-              <button className="absolute right-2 flex items-center justify-center group-hover:space-x-2 bg-primary text-white rounded-full p-2 w-28 hover:bg-secondary group-hover:w-32 transition-all duration-300">
+              <button className="absolute right-2 flex items-center justify-center group-hover:space-x-2 bg-primary text-white rounded-full p-2 w-28 hover:bg-secondary group-hover:w-32 transition-all duration-75">
                 <span className="inline-flex items-center group-justify-center text-center">
                   SEND
                 </span>
