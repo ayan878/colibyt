@@ -1,5 +1,10 @@
+
+import Carousel from '../components/ui/Carousel'
+
 function AboutUs() {
-  return <div>AboutUs</div>;
+  return (
+    <div><Carousel/></div>
+  )
 }
 
-export default AboutUs;
+export default AboutUs
