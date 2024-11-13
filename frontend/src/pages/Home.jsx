@@ -7,6 +7,8 @@ import WorkingProcess from "../components/WorkingProcess";
 // import Services from "./Services";
 import Header2 from "../components/Header2"
 import Footer from "../components/Footer";
+import Request from "../components/Request";
+import Reputation from "../components/Reputation";
 
 function Home() {
   return (
@@ -18,6 +20,8 @@ function Home() {
       <OurServices/>
       <About/>
       <WorkingProcess/>
+      <Reputation/>
+      <Request/>
       <Footer/>
       {/* <Services/> */}
     </div>
