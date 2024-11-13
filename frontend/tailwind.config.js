@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import { transform } from "framer-motion";
 import clipPath from "tailwind-clip-path";
 
 export default {
@@ -23,13 +22,13 @@ export default {
         duotone: "900",
       },
       clipPath: {
-        memery:"polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, calc(100% - 12px) 100%, 12px 100%, 0px 100%, 0px 0px);",
+        memery:
+          "polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, calc(100% - 12px) 100%, 12px 100%, 0px 100%, 0px 0px);",
         diamond: "polygon(80% 0px, 100% 20%, 100% 100%, 0px 100%, 0px 0px)",
         sim: "polygon(80% 0px, 100% 30%, 100% 100%, 0px 100%, 0px 0px)",
         hexagon:
           "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
       },
-      // Custom Colors
       colors: {
         body: "#004B72",
         primary: "#00a0f1",
@@ -57,13 +56,11 @@ export default {
         border: "#E3F0FF",
         "border-translucent": "rgba(227, 240, 255, 1)",
       },
-      // Custom Border Radius
       borderRadius: {
         DEFAULT: "10px",
         sm: "20px",
         pill: "50px",
       },
-      // Custom Transitions
       transitionTimingFunction: {
         DEFAULT: "ease",
       },
@@ -95,7 +92,7 @@ export default {
         vibration: "vibrate 0.5s infinite",
         rotateClockwise: "spinClockwise 20s linear infinite",
         rotateAntiClockwise: "spinAntiClockwise 20s linear infinite",
-        slideLeft: "slideLeft 15s linear infinite",
+        slideLeft: "slideLeft 10s linear infinite",
         rippleEffect: "rippleEffect 3s ease-out infinite",
         rippleEffectDelay: "rippleEffect 3s ease-out infinite 1s",
         loader: "orbitLoader 3s linear infinite",
@@ -129,8 +126,8 @@ export default {
         },
         rippleEffectDelay: {
           "0%": { opacity: "0", transform: "scale(0.5)" },
-          "50%": { opacity: "1", transform: "scale(1.5)" }, // Bigger, pill-shaped
-          "100%": { opacity: "0", transform: "scale(2)" }, // Continue growing and fading out
+          "50%": { opacity: "1", transform: "scale(1.5)" },
+          "100%": { opacity: "0", transform: "scale(2)" },
         },
         orbitLoader: {
           "0%": { transform: "rotate(0deg)translateX(50)" },
@@ -143,20 +140,29 @@ export default {
           "10%": {
             clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)",
           },
-          // "50%": {
-          //   clipPath:
-          //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)",
-          // },
-          // "75%": {
-          //   clipPath:
-          //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)",
-          // },
-          // "100%": {
-          //   clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)",
-          // },
         },
       },
     },
   },
   plugins: [clipPath],
 };
+
+// prixClipFix: {
+//           "0%": {
+//             clipPath: "polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)",
+//           },
+//           "10%": {
+//             clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)",
+//           },
+//           // "50%": {
+//           //   clipPath:
+//           //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)",
+//           // },
+//           // "75%": {
+//           //   clipPath:
+//           //     "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)",
+//           // },
+//           // "100%": {
+//           //   clipPath: "polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)",
+//           // },
+//         },
