@@ -96,7 +96,7 @@ function Reputation() {
             </p>
           </div>
         </div> */}
-       {/* <StackedCard/> */}
+       <StackedCard/>
       </div>
     </div>
   );
