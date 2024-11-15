@@ -135,8 +135,8 @@ function StackedSheets() {
                   scaleY: `${index * 0.008 + 0.8}`,
                 }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 3,
+                  duration: .5,
+                  delay: index * 5,
                   ease: "easeOut",
                 }}
                 exit={{

@@ -19,7 +19,7 @@ function Reputation() {
         </h1>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 p-8">
-        <div className="flex flex-col w-96 gap-6 border ">
+        <div className="flex flex-col w-2/5 gap-6  ">
           <h1 className="text-5xl font-bold text-dark">
             <span className="text-primary">900+</span>{" "}
             <span>customers win deals with Colibyt</span>
@@ -45,57 +45,6 @@ function Reputation() {
             </div>
           </div>
         </div>
-        {/* <div className="relative h-[450px] lg:h-[500px] shadow-xl border-4">
-          <div
-            className="absolute top-0 left-0 w-full min-h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between"
-            style={{
-              zIndex: 0,
-              transformOrigin: "left",
-              backgroundColor: "white",
-              color: "black",
-              transform: "translateX(0%) scale(1) translateZ(0px)",
-           
-            }}
-          >
-            <h1>“Amazing software services”</h1>
-            <p>
-              The solutions they're providing is helping our business run more
-              smoothly. We've been able to make quick developments with them,
-              meeting our product vision within the timeline we set up. Listen
-              to them because they can give strong advice about how to build
-              good products. Maverick Phoenix Board Member, UNIQA Seattle, USA
-              “Amazing software services” Respect for the customer,
-              understanding of the requirements and team needs, meticulous,
-              almost obsessive research and attention to details, extreme
-              success willing. Those who seek the best are willing to pay for
-              quality
-            </p>
-          </div>
-          <div
-            className="absolute top-0 left-0 w-full min-h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between"
-            style={{
-              zIndex: 0,
-              transformOrigin: "left",
-              backgroundColor: "white",
-              color: "black",
-              transform: "translateX(0%) scale(1) translateZ(0px)",
-            }}
-          >
-            <h1>“Amazing software services”</h1>
-            <p>
-              The solutions they're providing is helping our business run more
-              smoothly. We've been able to make quick developments with them,
-              meeting our product vision within the timeline we set up. Listen
-              to them because they can give strong advice about how to build
-              good products. Maverick Phoenix Board Member, UNIQA Seattle, USA
-              “Amazing software services” Respect for the customer,
-              understanding of the requirements and team needs, meticulous,
-              almost obsessive research and attention to details, extreme
-              success willing. Those who seek the best are willing to pay for
-              quality
-            </p>
-          </div>
-        </div> */}
        <StackedCard/>
       </div>
     </div>
