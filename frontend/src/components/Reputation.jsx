@@ -110,7 +110,6 @@ function Reputation() {
     }
   }, [visibleSheets]);
 
-  useEffect;
   return (
     <div className="mt-24 bg-white">
       <div className="flex flex-col items-center justify-center">
